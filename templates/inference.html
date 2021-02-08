@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Model Inference
+{% endblock %}
+
+{% block content %}
+
+    <h1>Predict Your Fitness </h1>
+    <section>
+        <form method ="POST" action="/inference">
+            <div>
+                <label for="input"> 
+                    ENTER YOUR AGE+
+                </label>
+                <label for="input"> 
+                    ENTER YOUR GENDER+
+                </label>
+                <label for="input"> 
+                    ENTER YOUR USAGE+
+                </label>
+                <label for="input"> 
+                    ENTER YOUR MILES+
+                </label>
+               <P><input type= "text" name="Age"></P> 
+               <P><input type= "text" name="Gender"></P> 
+               <P><input type= "text" name="Usage"></P> 
+               <P><input type= "text" name="Miles"></P> 
+               <p><input type="submit" value="Predict"></p>
+            </div>
+            <div>
+                <label for="input">
+                    Your fitness rate is: 
+                </label>
+               <p>{{fitness}}<p>
+                
+            </div>
+        </form>
+    </section>
+{% endblock %}

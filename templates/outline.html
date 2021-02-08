@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Outline
+{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        max-width: 100%;
+    }
+    .row {
+        padding-bottom: 5px;
+        /*padding-top: 5px;*/
+    }
+    body {
+        background-image: url('https://media-exp1.licdn.com/dms/image/C561BAQF7xZdKCxp6bQ/company-background_10000/0?e=2159024400&v=beta&t=ifrf-xxRaUEtIs9pE_DyO68hM0UG0sAe40fO4UYMfFY');
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
+        }
+    .jumbotron {
+    background: rgba(228, 228, 228, 0.5); 
+    }
+</style>
+    </style>
+
+    <div class="jumbotron">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12 flex-column d-flex">
+                    <h2>Gathering and Preparation</h2>
+                    <p>
+                        The dataset was gathered from a dataset on kaggle which used the data on fitness and other features to perfromance 
+                        analysis of the product. However, since the point of our project was to make a prediction model. I decided to use the 
+                        dataset to predict the fitness and relate it to injuries based on other features.
+                    </p>
+                    <div style="text-align: center">
+                        <img src="static\images\datacapture.PNG" width="800" height="208">
+                    </div>
+                    <h5 style="padding-top: 15px">Analyze and splitting the dataset</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 flex-column d-flex" >
+                    <div style="text-align: center">
+                        <img src="static\images\analysis.PNG" height="2000" width="2000">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 flex-column d-flex">
+                    <h5>Model training and testing using linear regression</h5>
+                    <div style="text-align: center">
+                        <img src="static\images\modelCreation.PNG" height="2000" width="2000">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
