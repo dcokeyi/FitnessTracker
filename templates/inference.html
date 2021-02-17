@@ -5,36 +5,53 @@
 {% endblock %}
 
 {% block content %}
-
-    <h1>Predict Your Fitness </h1>
-    <section>
-        <form method ="POST" action="/inference">
-            <div>
-                <label for="input"> 
-                    ENTER YOUR AGE+
-                </label>
-                <label for="input"> 
-                    ENTER YOUR GENDER+
-                </label>
-                <label for="input"> 
-                    ENTER YOUR USAGE+
-                </label>
-                <label for="input"> 
-                    ENTER YOUR MILES+
-                </label>
-               <P><input type= "text" name="Age"></P> 
-               <P><input type= "text" name="Gender"></P> 
-               <P><input type= "text" name="Usage"></P> 
-               <P><input type= "text" name="Miles"></P> 
-               <p><input type="submit" value="Predict"></p>
-            </div>
-            <div>
-                <label for="input">
-                    Your fitness rate is: 
-                </label>
-               <p>{{fitness}}<p>
-                
-            </div>
-        </form>
-    </section>
+<style>
+    body {
+        max-width: 100%;
+    }
+    .row {
+        padding-bottom: 5px;
+        /*padding-top: 5px;*/
+    }
+    body {
+        background-image: url('https://media-exp1.licdn.com/dms/image/C561BAQF7xZdKCxp6bQ/company-background_10000/0?e=2159024400&v=beta&t=ifrf-xxRaUEtIs9pE_DyO68hM0UG0sAe40fO4UYMfFY');
+        background-repeat: no-repeat;
+        background-attachment: fixed;  
+        background-size: cover;
+        }
+    .jumbotron {
+    background: rgba(228, 228, 228, 0.5); 
+    }
+</style>
+    </style>
+<div class="container">
+    <form method ="POST" action="/inference">
+        <div>
+            <label for="input"> 
+                ENTER YOUR AGE+
+            </label>
+            <label for="input"> 
+                ENTER YOUR GENDER+
+            </label>
+            <label for="input"> 
+                ENTER YOUR USAGE+
+            </label>
+            <label for="input"> 
+                ENTER YOUR MILES+
+            </label>
+           <P><input type= "text" name="Age"></P> 
+           <P><input type= "text" name="Gender"></P> 
+           <P><input type= "text" name="Usage"></P> 
+           <P><input type= "text" name="Miles"></P> 
+           <p><input type="submit" value="Predict"></p>
+        </div>
+        <div>
+            <label for="input">
+                Your fitness rate is: 
+            </label>
+           <p>{{fitness}}<p>
+            
+        </div>
+    </form>
+</div>
 {% endblock %}
